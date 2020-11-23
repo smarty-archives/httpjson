@@ -10,8 +10,6 @@ import (
 func Render(response http.ResponseWriter, options ...RenderOption) {
 	renderer := NewResponseRenderer()
 
-	Options.RenderIndent("", "  ")(renderer)
-
 	for _, option := range options {
 		option(renderer)
 	}
